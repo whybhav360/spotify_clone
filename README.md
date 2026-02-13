@@ -15,10 +15,7 @@ A feature-rich Spotify clone built with Flutter. This application aims to replic
 
 ## 📸 Screenshots
 
-| Light Mode | Dark Mode |
-| --- | --- |
-| _Your Light Mode Screenshot Here_ | _Your Dark Mode Screenshot Here_ |
-| _Your Light Mode Screenshot Here_ | _Your Dark Mode Screenshot Here_ |
+*sooN*
 
 ## 💻 Tech Stack
 
@@ -58,6 +55,4 @@ To get a local copy up and running, follow these simple steps.
 
 ## 🤝 Contact
 
-Your Name - your.email@example.com
-
-Project Link: [https://github.com/your_username/spotify_clone](https://github.com/your_username/spotify_clone)
+Vaibhav Madaan - vaibhavmadaan360@gmail.com
