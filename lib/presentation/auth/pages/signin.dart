@@ -55,12 +55,11 @@ class SigninPage extends StatelessWidget {
                     ScaffoldMessenger.of(context).showSnackBar(snackbar);
                   },
                   (r) {
-                    Navigator.pushAndRemoveUntil(
+                    Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
                         builder: (BuildContext context) => HomePage(),
                       ),
-                      (route) => false,
                     );
                   },
                 );
