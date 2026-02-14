@@ -5,11 +5,10 @@ A feature-rich Spotify clone built with Flutter. This application aims to replic
 ## 🌟 Features
 
 - **User Authentication**: Secure sign-up and login functionality.
-- **Dynamic Home Page**: Discover new songs and browse through curated playlists.
+- **Dynamic Home Page**: Discover new songs and browse through favorite songs.
 - **User Profile**: View your profile information, including your favorite songs.
 - **Music Player**: A beautiful and functional music player with playback controls.
 - **Favorite Songs**: Add and manage your list of favorite tracks.
-- **Playlist Management**: Create and manage your own playlists.
 - **Dark Mode**: A sleek and stylish dark theme for a comfortable viewing experience.
 - **And much more!**
 
