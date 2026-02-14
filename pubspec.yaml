@@ -22,6 +22,7 @@ dependencies:
   cloud_firestore:
   just_audio:
   flutter_native_splash:
+  flutter_launcher_icons:
 
 dev_dependencies:
   flutter_test:
