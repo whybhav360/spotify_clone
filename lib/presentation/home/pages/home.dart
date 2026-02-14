@@ -124,7 +124,7 @@ class _HomePageState extends State<HomePage>
       indicatorColor: AppColors.primary,
       labelColor: context.isDarkMode ? Colors.white : Colors.black,
       controller: _tabController,
-      padding: EdgeInsets.symmetric(vertical: 41, horizontal: 16),
+      padding: EdgeInsets.symmetric(vertical: 22, horizontal: 12),
       tabs: [
         Text(
           'Songs',
