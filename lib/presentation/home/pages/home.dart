@@ -7,6 +7,7 @@ import 'package:spotify_clone/domain/usecases/auth/signout.dart';
 import 'package:spotify_clone/presentation/home/widgets/new_songs.dart';
 import 'package:spotify_clone/presentation/home/widgets/playlist.dart';
 import 'package:spotify_clone/presentation/profile/pages/profile.dart';
+import 'package:spotify_clone/presentation/videos/pages/videos_page.dart';
 
 import '../../../core/configs/assets/app_vectors.dart';
 import '../../../service_locator.dart';
@@ -89,7 +90,7 @@ class _HomePageState extends State<HomePage>
                   controller: _tabController,
                   children: [
                     ListView(children: [NewSongs(), Playlist()]),
-                    Container(),
+                    VideosPage(),
                     Container(),
                     Container(),
                   ],
