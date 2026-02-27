@@ -3,15 +3,12 @@ import 'package:flutter_svg/svg.dart';
 import 'package:spotify_clone/common/helpers/is_dark_mode.dart';
 import 'package:spotify_clone/core/configs/assets/app_images.dart';
 import 'package:spotify_clone/core/configs/theme/app_colors.dart';
-import 'package:spotify_clone/domain/usecases/auth/signout.dart';
 import 'package:spotify_clone/presentation/home/widgets/new_songs.dart';
 import 'package:spotify_clone/presentation/home/widgets/playlist.dart';
 import 'package:spotify_clone/presentation/profile/pages/profile.dart';
 import 'package:spotify_clone/presentation/videos/pages/videos_page.dart';
 
 import '../../../core/configs/assets/app_vectors.dart';
-import '../../../service_locator.dart';
-import '../../auth/pages/signin.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -45,27 +42,14 @@ class _HomePageState extends State<HomePage>
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 15),
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        IconButton(
-                          onPressed: () async {
-                            await sl<SignOutUseCase>().call();
-                            Navigator.pushAndRemoveUntil(
-                              context,
-                              MaterialPageRoute(
-                                builder: (BuildContext context) => SigninPage(),
-                              ),
-                              (route) => false,
-                            );
-                          },
-                          icon: Icon(Icons.logout),
-                        ),
                         Center(
                           child: Transform.scale(
                             scale: 0.8,
                             child: SvgPicture.asset(AppVectors.logo),
                           ),
                         ),
+                        Spacer(),
                         IconButton(
                           onPressed: () {
                             Navigator.push(
@@ -116,8 +100,8 @@ class _HomePageState extends State<HomePage>
             Align(
               alignment: Alignment.bottomRight,
               child: Padding(
-                padding: const EdgeInsets.only(right: 60),
-                child: Image.asset(AppImages.homeArtist),
+                padding: const EdgeInsets.only(right: 40),
+                child: Image.asset(AppImages.homeArtist,scale: 0.1,),
               ),
             ),
           ],

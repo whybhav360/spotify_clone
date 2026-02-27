@@ -25,6 +25,7 @@ dependencies:
   flutter_launcher_icons:
   youtube_player_flutter:
   flutter_inappwebview:
+  http: ^1.2.1
 
 
 dev_dependencies:

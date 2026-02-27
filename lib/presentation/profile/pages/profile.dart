@@ -10,6 +10,9 @@ import 'package:spotify_clone/presentation/profile/bloc/profile_info_state.dart'
 import 'package:spotify_clone/presentation/song_player/pages/song_player.dart';
 
 import '../../../common/widgets/favorite_button/favorite_button.dart';
+import '../../../domain/usecases/auth/signout.dart';
+import '../../../service_locator.dart';
+import '../../auth/pages/signin.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
@@ -20,6 +23,19 @@ class ProfilePage extends StatelessWidget {
       appBar: BasicAppBar(
         backgroundColor: const Color(0xff2C2B2B),
         title: const Text("Profile"),
+        action: IconButton(
+          onPressed: () async {
+            await sl<SignOutUseCase>().call();
+            Navigator.pushAndRemoveUntil(
+              context,
+              MaterialPageRoute(
+                builder: (BuildContext context) => SigninPage(),
+              ),
+              (route) => false,
+            );
+          },
+          icon: Icon(Icons.logout),
+        ),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -35,9 +51,7 @@ class ProfilePage extends StatelessWidget {
           ),
           const SizedBox(height: 15),
 
-          Expanded(
-            child: _favoriteSongs(),
-          ),
+          Expanded(child: _favoriteSongs()),
         ],
       ),
     );
@@ -183,9 +197,9 @@ class ProfilePage extends StatelessWidget {
                             songEntity: state.favoriteSongs[index],
                             key: UniqueKey(),
                             function: () {
-                              context
-                                  .read<FavoriteSongsCubit>()
-                                  .removeSong(index);
+                              context.read<FavoriteSongsCubit>().removeSong(
+                                index,
+                              );
                             },
                           ),
                         ],
